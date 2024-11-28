@@ -8,19 +8,25 @@ import Image from "next/image";
 
 const ClientStoryCard = ({ story }) => {
 	return (
-		<div className="w-[24rem] md:w-full flex justify-center  rounded-lg p-4">
-			<div className="w-full">
+		<div className="w-full sm:w-full flex justify-center rounded-lg p-4 mb-4">
+			<div className="w-full bg-white ">
+				{/* Image */}
 				<Image
 					src={story.image}
 					alt={story.name}
-					width={500}
-					height={500}
-					className="w-40 md:w-full h-auto max-h-[300px] object-contain md:object-cover mb-4 rounded-tl-[50px] rounded-br-[50px]"
+					width={300}
+					height={100}
+					className="w-full h-auto max-h-[300px] object-contain sm:object-cover mb-4 rounded-tr-[5rem] rounded-bl-[5rem]"
 				/>
-				<div className="text-umojablue text-justify">
-					<h3 className="text-2xl font-semibold mb-2">{story.name}</h3>
-					<p className="text-gray-700 mb-4">{story.description}</p>
-					<p>{story.country}</p>
+				{/* Content */}
+				<div className="text-umojablue p-4 text-left">
+					<h3 className="text-lg sm:text-xl font-semibold mb-2">
+						{story.name}
+					</h3>
+					<p className="text-sm sm:text-base text-gray-700 mb-4">
+						{story.description}
+					</p>
+					<p className="text-sm text-gray-500">{story.country}</p>
 				</div>
 			</div>
 		</div>
@@ -29,13 +35,14 @@ const ClientStoryCard = ({ story }) => {
 
 export default function ClientStories() {
 	const stories = clients;
+
 	return (
 		<section>
-			<div className="py-20 grid gap-5 place-items-center">
-				<h2 className="text-3xl font-bold text-center mb-10 uppercase text-umojablue">
-					CLIENT STORIES
+			<div className="py-20 pr-2 sm:px-6 lg:px-8">
+				<h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 uppercase text-umojablue">
+					Client Stories
 				</h2>
-				<div className="container w-full px-4 md:px-0 md:w-2/3">
+				<div className="max-w-7xl mx-auto">
 					<Swiper
 						spaceBetween={10}
 						loop={true}
@@ -53,41 +60,32 @@ export default function ClientStories() {
 							0: {
 								slidesPerView: 1,
 								spaceBetween: 10,
-								autoplay: false,
 							},
 							640: {
-								slidesPerView: 2,
-								spaceBetween: 5,
-								autoplay: false,
+								slidesPerView: 1,
+								spaceBetween: 15,
 							},
 							768: {
 								slidesPerView: 2,
 								spaceBetween: 20,
-								autoplay: {
-									delay: 6000,
-									disableOnInteraction: false,
-								},
 							},
 							1024: {
 								slidesPerView: 3,
 								spaceBetween: 30,
-								autoplay: {
-									delay: 6000,
-									disableOnInteraction: false,
-								},
 							},
 						}}
 					>
+						{/* Slide content */}
 						{stories.map((story, index) => (
 							<SwiperSlide key={index}>
 								<ClientStoryCard story={story} />
 							</SwiperSlide>
 						))}
 					</Swiper>
-					<div className="flex justify-center mt-20">
+					<div className="flex justify-center mt-10">
 						<Link
 							href="client-stories"
-							className="inline-block px-4 py-2 bottom-2 relative bg-umojablue text-white font-semibold rounded-lg hover:bg-umojayellow hover:text-umojablue transition duration-300"
+							className="inline-block px-6 py-3 bg-umojablue text-white font-semibold rounded-lg hover:bg-umojayellow hover:text-umojablue transition duration-300"
 						>
 							Read More
 						</Link>

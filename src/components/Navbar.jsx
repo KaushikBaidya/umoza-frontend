@@ -113,17 +113,17 @@ const Navbar = () => {
 									dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
 								}`}
 							>
-								<ul className="text-left">
+								<div className="text-left">
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										USA
+										Uganda
 									</li>
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Canada
+										Kenya
 									</li>
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Australia
+										Zambia
 									</li>
-								</ul>
+								</div>
 							</div>
 						</div>
 

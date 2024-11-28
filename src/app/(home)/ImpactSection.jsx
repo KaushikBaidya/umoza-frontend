@@ -11,12 +11,12 @@ const stats = [
 
 export default function ImpactSection() {
 	return (
-		<section>
-			<div className="text-white bg-umojablue bg-patternBg bg-[length:2000px_600px] bg-center bg-repeat mix-blend-multiply">
+		<section className="">
+			<div className="text-white bg-umojablue bg-patternBg bg-[length:2000px_600px] bg-center bg-repeat mix-blend-multiply ">
 				<div className="bg-umojablue/95 py-20">
 					<div className="max-w-6xl mx-auto text-center">
 						<h2 className="text-3xl font-bold mb-8 uppercase">Our Impact</h2>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 px-4">
 							{stats.map((stat, index) => (
 								<div
 									key={index}

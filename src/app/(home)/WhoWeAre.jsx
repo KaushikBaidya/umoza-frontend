@@ -10,9 +10,9 @@ export default function WhoWeAre() {
 		setIsExpanded(!isExpanded);
 	};
 	return (
-		<section className="bg-white p-20">
+		<section className="bg-white lg:p-20">
 			<div className="container max-w-7xl mx-auto space-y-6 sm:space-y-12">
-				<div className="block max-w-5xl gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-white shadow rounded-2xl p-10">
+				<div className="block max-w-5xl gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-white shadow rounded-2xl p-4">
 					<div className="p-6 space-y-2 lg:col-span-5">
 						<h2 className="text-umojablue text-3xl font-bold mb-4 uppercase">
 							who we are
@@ -69,7 +69,7 @@ export default function WhoWeAre() {
 					<Image
 						src={UmozaBanner}
 						alt="banner"
-						className="object-cover w-full h-64 rounded-tr-full rounded-bl-full sm:h-96 lg:col-span-7 dark:bg-gray-500"
+						className="object-cover w-full h-64  rounded-tr-full rounded-bl-full sm:h-96 lg:col-span-7 dark:bg-gray-500"
 					/>
 				</div>
 			</div>

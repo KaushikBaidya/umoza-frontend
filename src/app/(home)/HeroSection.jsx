@@ -7,7 +7,7 @@ import { Pagination, Autoplay, Keyboard, EffectFade } from "swiper/modules";
 
 export default function HeroSection() {
 	return (
-		<section>
+		<section className="">
 			<Swiper
 				slidesPerView={1}
 				spaceBetween={15}
@@ -22,17 +22,17 @@ export default function HeroSection() {
 			>
 				{/* Slide 1 */}
 				<SwiperSlide>
-					<div className="bg-slide1 h-[70vh] bg-cover bg-[center-top] transition-opacity duration-1000 ease-in-out"></div>
+					<div className="bg-slide1 h-[50vh] lg:h-[70vh] bg-cover bg-[center-top] transition-opacity duration-1000 ease-in-out"></div>
 				</SwiperSlide>
 
 				{/* Slide 2 */}
 				<SwiperSlide>
-					<div className="bg-slide2 h-[70vh] bg-cover bg-[center-top] transition-opacity duration-1000 ease-in-out"></div>
+					<div className="bg-slide2 h-[50vh] lg:h-[70vh] bg-cover bg-[center-top] transition-opacity duration-1000 ease-in-out"></div>
 				</SwiperSlide>
 
 				{/* Slide 3 */}
 				<SwiperSlide>
-					<div className="bg-slide3 h-[70vh] bg-cover bg-[center-top] transition-opacity duration-1000 ease-in-out"></div>
+					<div className="bg-slide3 h-[50vh] lg:h-[70vh] bg-cover bg-[center-top] transition-opacity duration-1000 ease-in-out"></div>
 				</SwiperSlide>
 			</Swiper>
 		</section>
