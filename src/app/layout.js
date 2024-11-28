@@ -2,6 +2,9 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Figtree } from "next/font/google";
+import QueryProvider from "@/components/QueryProvider";
+
+// import { QueryClient, QueryClientProvider } from "react-query";
 
 const figtree = Figtree({
 	subsets: ["latin"],
@@ -18,11 +21,13 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${figtree.className} antialiased bg-gray-50`}>
-				<Navbar />
-				<main className="max-w-screen-3xl mx-auto min-h-screen py-28">
-					{children}
-				</main>
-				<Footer />
+				<QueryProvider>
+					<Navbar />
+					<main className="max-w-screen-3xl mx-auto min-h-screen py-20">
+						{children}
+					</main>
+					<Footer />
+				</QueryProvider>
 			</body>
 		</html>
 	);

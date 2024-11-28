@@ -1,11 +1,20 @@
-import Image from "next/image";
+"use client";
+import ClientStories from "./(home)/ClientStories";
+import Contact from "./(home)/Contact";
+import HeroSection from "./(home)/HeroSection";
+import ImpactSection from "./(home)/ImpactSection";
+import PresenceSection from "./(home)/PresenceSection";
+import WhoWeAre from "./(home)/WhoWeAre";
 
 export default function Home() {
 	return (
 		<main>
-			<div className="h-screen bg-slate-400 py-28">
-				<h1>Hello</h1>
-			</div>
+			<HeroSection />
+			<WhoWeAre />
+			<ImpactSection />
+			<PresenceSection />
+			<ClientStories />
+			<Contact />
 		</main>
 	);
 }

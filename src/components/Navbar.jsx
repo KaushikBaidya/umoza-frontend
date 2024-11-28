@@ -24,7 +24,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className="fixed w-full text-lg font-semibold text-gray-600 z-50 backdrop-blur-sm bg-gray-50 lg:bg-transparent ">
+		<nav className="fixed w-full text-base font-semibold text-gray-600 z-50 backdrop-blur-3xl bg-gray-50 lg:bg-[#f5f5f5ab] ">
 			<div
 				className="lg:w-11/12 2xl:max-w-screen-2xl mx-auto flex flex-wrap items-center justify-around z-50 py-2"
 				ref={menuRef}
@@ -32,7 +32,7 @@ const Navbar = () => {
 				<div className="w-full flex flex-grow-0 justify-between lg:w-auto lg:static lg:block lg:justify-start">
 					<Link href="/">
 						<Image
-							className="w-36"
+							className="w-32"
 							src={PortfolioLogo}
 							alt="logo"
 							width={150}
@@ -56,7 +56,7 @@ const Navbar = () => {
 						{/* Menu Items */}
 						<Link href="/">
 							<div
-								className="px-4 border-transparent border-b-4 hover:text-orange-500 py-2 cursor-pointer"
+								className="px-4 border-transparent border-b-4 hover:text-orange py-2 cursor-pointer"
 								onClick={() => setNavbarOpen(false)}
 							>
 								Home
@@ -64,17 +64,17 @@ const Navbar = () => {
 						</Link>
 						<Link href="/about">
 							<div
-								className="px-4 border-transparent border-b-4 hover:text-orange-500 py-2 cursor-pointer"
+								className="px-4 border-transparent border-b-4 hover:text-orange py-2 cursor-pointer"
 								onClick={() => setNavbarOpen(false)}
 							>
 								About Us
 							</div>
 						</Link>
 
-						<div className="relative">
+						<div className="relative lg:hidden">
 							{/* Clickable Title */}
 							<div
-								className="cursor-pointer py-2 px-4 border-transparent border-b-4 hover:text-orange-500"
+								className="cursor-pointer py-2 px-4 border-transparent border-b-4 hover:text-orange"
 								onClick={() => setOperationDropdownOpen(!operationDropdownOpen)}
 							>
 								Our Operation
@@ -87,13 +87,13 @@ const Navbar = () => {
 								}`}
 							>
 								<ul className="text-center  py-2">
-									<li className="px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-gray-100 cursor-pointer">
+									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
 										Uganda
 									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-gray-100 cursor-pointer">
+									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
 										Zambia
 									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-gray-100 cursor-pointer">
+									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
 										Kenya
 									</li>
 								</ul>
@@ -114,13 +114,13 @@ const Navbar = () => {
 								}`}
 							>
 								<ul className="text-left">
-									<li className="px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-gray-100 cursor-pointer">
+									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
 										USA
 									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-gray-100 cursor-pointer">
+									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
 										Canada
 									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange-500 hover:bg-gray-100 cursor-pointer">
+									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
 										Australia
 									</li>
 								</ul>
@@ -129,7 +129,7 @@ const Navbar = () => {
 
 						<Link href="/our-stories">
 							<div
-								className="px-4 border-transparent border-b-4 hover:text-orange-500 py-2 cursor-pointer"
+								className="px-4 border-transparent border-b-4 hover:text-orange py-2 cursor-pointer"
 								onClick={() => setNavbarOpen(false)}
 							>
 								Our Stories
@@ -137,7 +137,7 @@ const Navbar = () => {
 						</Link>
 						<Link href="/career">
 							<div
-								className="px-4 border-transparent border-b-4 hover:text-orange-500 py-2 cursor-pointer"
+								className="px-4 border-transparent border-b-4 hover:text-orange py-2 cursor-pointer"
 								onClick={() => setNavbarOpen(false)}
 							>
 								Career
