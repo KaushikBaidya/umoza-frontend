@@ -127,7 +127,7 @@ const Navbar = () => {
 							</div>
 						</div>
 
-						<Link href="/our-stories">
+						<Link href="/client-stories">
 							<div
 								className="px-4 border-transparent border-b-4 hover:text-orange py-2 cursor-pointer"
 								onClick={() => setNavbarOpen(false)}
