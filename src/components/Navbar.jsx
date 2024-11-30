@@ -88,13 +88,13 @@ const Navbar = () => {
 							>
 								<ul className="text-center  py-2">
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Uganda
+										<Link href="/country/uganda">Uganda</Link>
 									</li>
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Zambia
+										<Link href="/country/zambia">Zambia</Link>
 									</li>
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Kenya
+										<Link href="/country/kenya">Kenya</Link>
 									</li>
 								</ul>
 							</div>
@@ -115,13 +115,13 @@ const Navbar = () => {
 							>
 								<div className="text-left">
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Uganda
+										<Link href="/country/uganda">Uganda</Link>
 									</li>
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Kenya
+										<Link href="/country/zambia">Zambia</Link>
 									</li>
 									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										Zambia
+										<Link href="/country/kenya">Kenya</Link>
 									</li>
 								</div>
 							</div>
