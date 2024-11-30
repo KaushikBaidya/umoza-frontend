@@ -5,9 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import PortfolioLogo from "@/assets/frontLogo.png";
 
+import { RiCloseLargeFill, RiMenu3Line } from "react-icons/ri";
+
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
-
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const [operationDropdownOpen, setOperationDropdownOpen] = useState(false);
 	const menuRef = useRef(null);
@@ -24,7 +25,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className="fixed w-full text-base font-semibold text-gray-600 z-50 backdrop-blur-3xl bg-gray-50 lg:bg-[#f5f5f5ab] ">
+		<nav className="fixed w-full text-base font-semibold text-gray-600 z-50 backdrop-blur-3xl bg-[#f5f5f5ab] ">
 			<div
 				className="lg:w-11/12 2xl:max-w-screen-2xl mx-auto flex flex-wrap items-center justify-around z-50 py-2"
 				ref={menuRef}
@@ -32,7 +33,7 @@ const Navbar = () => {
 				<div className="w-full flex flex-grow-0 justify-between lg:w-auto lg:static lg:block lg:justify-start">
 					<Link href="/">
 						<Image
-							className="w-32"
+							className="w-28 p-2"
 							src={PortfolioLogo}
 							alt="logo"
 							width={150}
@@ -40,11 +41,15 @@ const Navbar = () => {
 						/>
 					</Link>
 					<button
-						className="text-blue-500 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+						className="text-umojablue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
 						type="button"
 						onClick={() => setNavbarOpen(!navbarOpen)}
 					>
-						Menu
+						{navbarOpen ? (
+							<RiCloseLargeFill size={25} />
+						) : (
+							<RiMenu3Line size={25} />
+						)}
 					</button>
 				</div>
 				<div
@@ -71,13 +76,13 @@ const Navbar = () => {
 							</div>
 						</Link>
 
+						{/* Mobile dropdown */}
 						<div className="relative lg:hidden">
-							{/* Clickable Title */}
 							<div
 								className="cursor-pointer py-2 px-4 border-transparent border-b-4 hover:text-orange"
 								onClick={() => setOperationDropdownOpen(!operationDropdownOpen)}
 							>
-								Our Operation
+								Where We Operate
 							</div>
 
 							{/* Toggleable Dropdown */}
@@ -87,13 +92,22 @@ const Navbar = () => {
 								}`}
 							>
 								<ul className="text-center  py-2">
-									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
+									<li
+										className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer"
+										onClick={() => setNavbarOpen(false)}
+									>
 										<Link href="/country/uganda">Uganda</Link>
 									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
+									<li
+										className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer"
+										onClick={() => setNavbarOpen(false)}
+									>
 										<Link href="/country/zambia">Zambia</Link>
 									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
+									<li
+										className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer"
+										onClick={() => setNavbarOpen(false)}
+									>
 										<Link href="/country/kenya">Kenya</Link>
 									</li>
 								</ul>
@@ -109,7 +123,7 @@ const Navbar = () => {
 						>
 							<div>Where We Operate</div>
 							<div
-								className={`absolute lg:mt-2 bg-white shadow-md rounded w-40 transition-all duration-300 ease-in-out ${
+								className={`absolute lg:mt-2 bg-[#f5f5f5f8] backdrop-blur-3xl shadow-md rounded w-40 transition-all duration-300 ease-in-out ${
 									dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
 								}`}
 							>
