@@ -31,24 +31,24 @@ export const usePutData = () => {
 };
 
 export const useGetData = (key, path) => {
-	const value = useGlobalContext();
+	// const value = useGlobalContext();
 
 	const { status, data, error, isLoading, isError, refetch } = useQuery(
 		[
 			key,
 			{
 				path: path,
-				headers: {
-					Authorization: "Bearer " + value.user,
-				},
+				// headers: {
+				// 	Authorization: "Bearer " + value.user,
+				// },
 			},
 		],
 		({ queryKey, signal }) => {
-			const { path, headers } = queryKey[1];
+			const { path } = queryKey[1];
 			return request({
 				method: "GET",
 				url: path,
-				headers: headers,
+				// headers: headers,
 				signal,
 			});
 		}

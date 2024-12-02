@@ -23,9 +23,11 @@ export default function RootLayout({ children }) {
 			<body className={`${figtree.className} antialiased bg-gray-50`}>
 				<QueryProvider>
 					<Navbar />
+
 					<main className="max-w-screen-3xl mx-auto min-h-screen py-20">
 						{children}
 					</main>
+
 					<Footer />
 				</QueryProvider>
 			</body>

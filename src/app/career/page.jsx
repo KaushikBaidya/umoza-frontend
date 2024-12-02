@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Banner from "./(components)/Banner";
 import BuildingCareer from "./(components)/BuildingCareer";
 import Diversity from "./(components)/Diversity";
 import WhyWorkAtUmoja from "./(components)/WhyWorkAtUmoja";
-// import JobOpportunities from "./(components)/JobOpportunities";
+import JobOpportunities from "./(components)/JobOpportunities";
+import SubmitCV from "./(components)/SubmitCV";
+import { FallbackLoading } from "@/components/ui/Loading";
 
 export default function Career() {
 	return (
@@ -13,7 +15,10 @@ export default function Career() {
 			<BuildingCareer />
 			<Diversity />
 			<WhyWorkAtUmoja />
-			{/* <JobOpportunities /> */}
+			<Suspense fallback={<FallbackLoading />}>
+				<JobOpportunities />
+			</Suspense>
+			<SubmitCV />
 		</section>
 	);
 }
