@@ -38,9 +38,9 @@ export const useGetData = (key, path) => {
 			key,
 			{
 				path: path,
-				// headers: {
-				// 	Authorization: "Bearer " + value.user,
-				// },
+				headers: {
+					Authorization: "Bearer " + value.user,
+				},
 			},
 		],
 		({ queryKey, signal }) => {
@@ -48,7 +48,7 @@ export const useGetData = (key, path) => {
 			return request({
 				method: "GET",
 				url: path,
-				// headers: headers,
+				headers: headers,
 				signal,
 			});
 		}
