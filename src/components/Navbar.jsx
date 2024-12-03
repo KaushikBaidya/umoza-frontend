@@ -25,9 +25,9 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className="fixed w-full text-base font-semibold text-gray-600 z-50 backdrop-blur-3xl bg-[#f5f5f5ab] ">
+		<nav className="fixed w-full text-base font-semibold z-50 backdrop-blur-3xl bg-[#f5f5f5ab] ">
 			<div
-				className="lg:w-11/12 2xl:max-w-screen-2xl mx-auto flex flex-wrap items-center justify-around z-50 py-2"
+				className="lg:w-11/12 xl:max-w-screen-2xl mx-auto flex flex-wrap items-center justify-around z-50 text-umojablue"
 				ref={menuRef}
 			>
 				<div className="w-full flex flex-grow-0 justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -41,7 +41,7 @@ const Navbar = () => {
 						/>
 					</Link>
 					<button
-						className="text-umojablue cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+						className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
 						type="button"
 						onClick={() => setNavbarOpen(!navbarOpen)}
 					>
@@ -92,24 +92,30 @@ const Navbar = () => {
 								}`}
 							>
 								<ul className="text-center  py-2">
-									<li
-										className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer"
-										onClick={() => setNavbarOpen(false)}
-									>
-										<Link href="/country/uganda">Uganda</Link>
-									</li>
-									<li
-										className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer"
-										onClick={() => setNavbarOpen(false)}
-									>
-										<Link href="/country/zambia">Zambia</Link>
-									</li>
-									<li
-										className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer"
-										onClick={() => setNavbarOpen(false)}
-									>
-										<Link href="/country/kenya">Kenya</Link>
-									</li>
+									<Link href="/country/uganda">
+										<li
+											className="px-4 py-2 hover:text-orange hover:bg-gray-100 cursor-pointer"
+											onClick={() => setNavbarOpen(false)}
+										>
+											Uganda
+										</li>
+									</Link>
+									<Link href="/country/zambia">
+										<li
+											className="px-4 py-2 hover:text-orange hover:bg-gray-100 cursor-pointer"
+											onClick={() => setNavbarOpen(false)}
+										>
+											Zambia
+										</li>
+									</Link>
+									<Link href="/country/kenya">
+										<li
+											className="px-4 py-2 hover:text-orange hover:bg-gray-100 cursor-pointer"
+											onClick={() => setNavbarOpen(false)}
+										>
+											Kenya
+										</li>
+									</Link>
 								</ul>
 							</div>
 						</div>
@@ -123,20 +129,26 @@ const Navbar = () => {
 						>
 							<div>Where We Operate</div>
 							<div
-								className={`absolute lg:mt-2 bg-[#f5f5f5f8] backdrop-blur-3xl shadow-md rounded w-40 transition-all duration-300 ease-in-out ${
+								className={`absolute lg:mt-2 bg-[#f5f5f5f8] backdrop-blur-3xl shadow-md rounded-lg overflow-hidden w-40 transition-all duration-300 ease-in-out ${
 									dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
 								}`}
 							>
 								<div className="text-left">
-									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										<Link href="/country/uganda">Uganda</Link>
-									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										<Link href="/country/zambia">Zambia</Link>
-									</li>
-									<li className="px-4 py-2 text-gray-600 hover:text-orange hover:bg-gray-100 cursor-pointer">
-										<Link href="/country/kenya">Kenya</Link>
-									</li>
+									<Link href="/country/uganda">
+										<li className="px-4 py-2 hover:bg-umojablue rounded hover:text-white cursor-pointer">
+											Uganda
+										</li>
+									</Link>
+									<Link href="/country/zambia">
+										<li className="px-4 py-2 hover:bg-umojablue rounded hover:text-white cursor-pointer">
+											Zambia
+										</li>
+									</Link>
+									<Link href="/country/kenya">
+										<li className="px-4 py-2 hover:bg-umojablue rounded hover:text-white cursor-pointer">
+											Kenya
+										</li>
+									</Link>
 								</div>
 							</div>
 						</div>

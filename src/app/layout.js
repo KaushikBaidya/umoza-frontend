@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Figtree } from "next/font/google";
 import QueryProvider from "@/components/QueryProvider";
-
+import { Toaster } from "react-hot-toast";
+import SocialBar from "@/components/ui/SocialBar";
+// import { AppProvider } from "@/hooks/context";
 // import { QueryClient, QueryClientProvider } from "react-query";
 
 const figtree = Figtree({
@@ -22,12 +24,12 @@ export default function RootLayout({ children }) {
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${figtree.className} antialiased bg-gray-50`}>
 				<QueryProvider>
+					<Toaster position="top-right" reverseOrder={false} />
 					<Navbar />
-
-					<main className="max-w-screen-3xl mx-auto min-h-screen py-20">
+					<SocialBar />
+					<main className="max-w-screen-3xl mx-auto min-h-screen py-16">
 						{children}
 					</main>
-
 					<Footer />
 				</QueryProvider>
 			</body>
