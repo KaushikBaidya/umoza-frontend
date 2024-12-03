@@ -41,9 +41,9 @@ export default function AboutWeStandFor() {
 							all women.
 						</p>
 						<p>
-							UMOJA's interventions aim to achieve large scale, positive changes
+							UMOJA&apos;s interventions aim to achieve large scale, positive changes
 							through economic and social programmes that enable women to
-							realise they're potential. The goal of UMOJA is to reduce poverty
+							realise they&apos;re potential. The goal of UMOJA is to reduce poverty
 							and empower women within the community by creating economic
 							opportunities through microfinance support. UMOJA firmly believes
 							and is actively involved in promoting human rights, dignity and
@@ -53,7 +53,7 @@ export default function AboutWeStandFor() {
 					<div className="grid gap-4">
 						<p>
 							through social, economic, and human capacity building. UMOJA is
-							committed to making it's programs socially and financially
+							committed to making it&apos;s programs socially and financially
 							sustainable, using new methods and improved technologies.
 						</p>
 						<p>
