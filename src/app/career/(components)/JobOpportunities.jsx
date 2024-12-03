@@ -1,17 +1,25 @@
 "use client";
 import Error from "@/components/error/Error";
-import { PulseLoading } from "@/components/ui/Loading";
+import { HashLoading } from "@/components/ui/Loading";
 import { useGetData } from "@/hooks/dataApi";
 import { useRouter } from "next/navigation";
 import { FaBriefcase } from "react-icons/fa";
 
 export default function JobOpportunities() {
+	const {
+		data: list,
+		error,
+		isLoading,
+		isError,
+	} = useGetData("cvbank", `/jobs/list`);
+
 	const router = useRouter();
-	const { data: lists } = useGetData("cvbank", `/jobs/list`);
 
-	const data = lists?.data || [];
+	if (isLoading) return <HashLoading />;
 
-	// console.log(data);
+	if (isError) return <Error message={error?.message} />;
+
+	const data = list.data;
 
 	return (
 		<section>

@@ -5,6 +5,7 @@ import { Figtree } from "next/font/google";
 import QueryProvider from "@/components/QueryProvider";
 import { Toaster } from "react-hot-toast";
 import SocialBar from "@/components/ui/SocialBar";
+import HomeLayout from "./(home)/layout";
 // import { AppProvider } from "@/hooks/context";
 // import { QueryClient, QueryClientProvider } from "react-query";
 
@@ -24,13 +25,15 @@ export default function RootLayout({ children }) {
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${figtree.className} antialiased bg-gray-50`}>
 				<QueryProvider>
-					<Toaster position="top-right" reverseOrder={false} />
-					<Navbar />
-					<SocialBar />
-					<main className="max-w-screen-3xl mx-auto min-h-screen py-16">
-						{children}
-					</main>
-					<Footer />
+					<HomeLayout>
+						<Toaster position="top-right" reverseOrder={false} />
+						<Navbar />
+						<SocialBar />
+						<main className="max-w-screen-3xl mx-auto min-h-screen py-16">
+							{children}
+						</main>
+						<Footer />
+					</HomeLayout>
 				</QueryProvider>
 			</body>
 		</html>

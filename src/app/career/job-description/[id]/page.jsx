@@ -3,11 +3,22 @@ import { useGetData } from "@/hooks/dataApi";
 import { useParams } from "next/navigation";
 import React from "react";
 import ApplyForThisJob from "../../(components)/ApplyForThisJob";
+import { HashLoading } from "@/components/ui/Loading";
+import Error from "@/components/error/Error";
 
 export default function JobDescription() {
 	const id = useParams();
 
-	const { data: list } = useGetData("careerDetails", `/Jobs/details/${id.id}`);
+	const {
+		data: list,
+		error,
+		isLoading,
+		isError,
+	} = useGetData("careerDetails", `/Jobs/details/${id.id}`);
+
+	if (isLoading) return <HashLoading />;
+
+	if (isError) return <Error message={error?.message} />;
 
 	const data = list?.data || [];
 
