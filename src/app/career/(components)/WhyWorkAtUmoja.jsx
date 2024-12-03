@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Autoplay, Keyboard } from "swiper/modules";
+import Image from "next/image";
 
 const testimonials = [
 	{
@@ -50,7 +51,13 @@ const TestimonialCard = ({ name, image, description, fullDescription }) => {
 		>
 			<div className={`flex flex-col h-48 ${isExpanded ? "h-auto" : "h-48"}`}>
 				<div className="flex items-center space-x-4">
-					<img src={image} alt={name} className="w-12 h-12 rounded-full" />
+					<Image
+						src={image}
+						alt={name}
+						width={300}
+						height={300}
+						className="w-12 h-12 rounded-full"
+					/>
 					<h4 className="font-semibold text-lg">{name}</h4>
 				</div>
 				<p className="text-gray-700 my-4 text-justify">

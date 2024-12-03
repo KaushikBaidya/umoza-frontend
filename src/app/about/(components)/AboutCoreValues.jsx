@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const values = [
 	{
 		image: "/assets/icons/Core-Values-Consistency.svg",
@@ -58,9 +60,11 @@ export default function AboutCoreValues() {
 								>
 									{/* Image and Title (initial view) */}
 									<div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center opacity-100 group-hover:opacity-0 group-hover:-translate-y-full transition-all duration-700">
-										<img
+										<Image
 											src={value.image}
 											alt={value.title}
+											width={100}
+											height={100}
 											className="mb-4 w-24 h-24 object-contain"
 										/>
 										<h3 className="text-2xl font-semibold">{value.title}</h3>

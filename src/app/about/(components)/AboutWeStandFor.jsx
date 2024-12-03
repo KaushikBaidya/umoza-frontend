@@ -41,7 +41,7 @@ export default function AboutWeStandFor() {
 							all women.
 						</p>
 						<p>
-							UMOJA’s interventions aim to achieve large scale, positive changes
+							UMOJA's interventions aim to achieve large scale, positive changes
 							through economic and social programmes that enable women to
 							realise they're potential. The goal of UMOJA is to reduce poverty
 							and empower women within the community by creating economic
