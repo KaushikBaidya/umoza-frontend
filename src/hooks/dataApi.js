@@ -44,7 +44,7 @@ export const useGetData = (key, path) => {
 			},
 		],
 		({ queryKey, signal }) => {
-			const { path } = queryKey[1];
+			const { path, headers } = queryKey[1];
 			return request({
 				method: "GET",
 				url: path,
