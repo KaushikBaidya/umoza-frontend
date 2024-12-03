@@ -31,7 +31,7 @@ export const usePutData = () => {
 };
 
 export const useGetData = (key, path) => {
-	// const value = useGlobalContext();
+	const value = useGlobalContext();
 
 	const { status, data, error, isLoading, isError, refetch } = useQuery(
 		[
