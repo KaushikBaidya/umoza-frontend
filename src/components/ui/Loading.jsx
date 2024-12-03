@@ -1,10 +1,17 @@
+import Image from "next/image";
 import React from "react";
 import { BarLoader, HashLoader } from "react-spinners";
 
 export const FallbackLoading = () => {
 	return (
 		<div className="bg-black flex flex-col items-center justify-center text-3xl text-primary h-screen">
-			<img className="h-10 mb-2" src="/images/logo.jpg" alt="logo" />
+			<Image
+				className="h-10 mb-2"
+				src="/images/logo.jpg"
+				width={300}
+				height={150}
+				alt="logo"
+			/>
 			<BarLoader height={4} width={100} color="#FF2800" />
 		</div>
 	);
