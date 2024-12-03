@@ -8,7 +8,7 @@ import WhoWeAre from "./(home)/WhoWeAre";
 
 export default function Home() {
 	return (
-		<main>
+		<main className="">
 			<HeroSection />
 			<WhoWeAre />
 			<ImpactSection />
